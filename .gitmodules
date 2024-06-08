@@ -1,0 +1,3 @@
+[submodule "eventEZ"]
+	path = eventEZ
+	url = https://github.com/DeepeshKalura/eventEZ.git
