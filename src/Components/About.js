@@ -1,6 +1,6 @@
 import React from "react";
 import { BsFillPlayCircleFill } from "react-icons/bs";
-import video from "../Assets/aboutvid.mp4";
+import video from "../assets/aboutvid.mp4";
 import { Link } from "react-router-dom";
 
 const About = () => {

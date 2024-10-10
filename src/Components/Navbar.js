@@ -16,7 +16,7 @@ import PhoneRoundedIcon from "@mui/icons-material/PhoneRounded";
 import ShoppingCartRoundedIcon from "@mui/icons-material/ShoppingCartRounded";
 import LuggageIcon from "@mui/icons-material/Luggage";
 import { Link } from "react-router-dom";
-import logo from "../Assets/tryvalleylogo.png";
+import logo from "../assets/tryvalleylogo.png";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
