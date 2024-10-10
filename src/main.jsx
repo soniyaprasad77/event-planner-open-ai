@@ -1,12 +1,13 @@
+
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.js";
+import App from "./App.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import Home from "./components/Home.js";
-import Event from "./components/Event.js";
+import Home from "./components/Home.jsx";
+import Event from "./components/Event.jsx";
 import eventData from "./data/events.json";
-import EventPlannerAi from "./components/EventPlannerAi.js";
+import EventPlannerAi from "./components/EventPlannerAi.jsx";
 
 const appRouter = createBrowserRouter([
   {
@@ -32,3 +33,4 @@ const appRouter = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<RouterProvider router={appRouter}></RouterProvider>);
+

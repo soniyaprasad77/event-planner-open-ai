@@ -28,7 +28,7 @@ const EventPlannerAi = ({ props }) => {
   const [zoom, setZoom] = useState(15);
   const [infoWindowOpen, setInfoWindowOpen] = useState(false);
   const { isLoaded } = useJsApiLoader({
-    googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
+    googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY,
   });
 
   const geocodeAddress = useCallback(async (address) => {
@@ -36,7 +36,7 @@ const EventPlannerAi = ({ props }) => {
       const response = await fetch(
         `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(
           address
-        )}&key=${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}`
+        )}&key=${import.meta.env.VITE_GOOGLE_MAPS_API_KEY}`
       );
       const data = await response.json();
       if (data.status === "OK") {
@@ -100,9 +100,9 @@ const EventPlannerAi = ({ props }) => {
       const a =
         Math.sin(dLat / 2) * Math.sin(dLat / 2) +
         Math.cos(lat1 * (Math.PI / 180)) *
-          Math.cos(lat2 * (Math.PI / 180)) *
-          Math.sin(dLon / 2) *
-          Math.sin(dLon / 2);
+        Math.cos(lat2 * (Math.PI / 180)) *
+        Math.sin(dLon / 2) *
+        Math.sin(dLon / 2);
       const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
       const distance = R * c;
 
@@ -221,7 +221,7 @@ const EventPlannerAi = ({ props }) => {
                   <h3 className="text-sm flex py-4">Event Type</h3>
                   {props[eventId - 1].event_type.map((type) => (
                     <div
-                      key={props[eventId - 1]}
+                      key={type}
                       className="flex flex-cols mb-4  "
                     >
                       <div className="text-[0.5rem] backdrop-blur-md bg-slate-300 rounded-md p-1">
@@ -236,7 +236,7 @@ const EventPlannerAi = ({ props }) => {
                   <h3 className="text-sm py-4">Audience</h3>
                   {props[eventId - 1].audience.map((type) => (
                     <div
-                      key={props[eventId - 1]}
+                      key={type}
                       className="flex flex-cols mb-4  "
                     >
                       <div className="text-[0.5rem] backdrop-blur-md bg-slate-300 rounded-md p-1">
@@ -251,7 +251,7 @@ const EventPlannerAi = ({ props }) => {
                   <h3 className="text-sm py-4">Topic</h3>
                   {props[eventId - 1].topic.map((type) => (
                     <div
-                      key={props[eventId - 1]}
+                      key={type}
                       className="flex flex-cols mb-4"
                     >
                       <div className="text-[0.5rem] backdrop-blur-md bg-slate-300 rounded-md p-1">
@@ -316,7 +316,7 @@ const EventPlannerAi = ({ props }) => {
                   <>
                     <h2 className=" text-2xl flex justify-center items-center">Your personalized plan will appear here</h2>
 
-                   
+
                   </>
                 )}
                 {loading && <p className="text-center mt-4 ">Loading...</p>}
@@ -368,6 +368,7 @@ const EventPlannerAi = ({ props }) => {
             >
               {userLocation && (
                 <Marker
+                  key="user-location"
                   position={userLocation}
                   onClick={() => setInfoWindowOpen(true)}
                 >
@@ -380,6 +381,7 @@ const EventPlannerAi = ({ props }) => {
               )}
               {eventLocation && (
                 <Marker
+                  key="event-location"
                   position={eventLocation}
                   onMouseOver={() => setInfoWindowOpen(true)}
                 >

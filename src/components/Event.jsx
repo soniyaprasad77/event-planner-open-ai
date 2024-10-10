@@ -26,26 +26,25 @@ const Event = ({ props }) => {
           key={event.id}
           className="max-w-sm border border-gray-200 rounded-lg shadow relative transition duration-300 ease-in-out transform hover:scale-105 hover:bg-[#23f2dd85] hover:cursor-pointer"
         >
-          <Link to={"/events/" + event.id}>
+          <Link to={"/events/" + event?.id}>
             <div>
               <img
                 className="rounded-t-lg"
-                src={require(`../data${event.image}`)}
+                src={`${event.image}`}
                 alt=""
+
               />
             </div>
             <div className="p-5">
-              <a href="#">
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">
                   {event.name}
                 </h5>
-              </a>
-              <p className="mb-6 font-normal text-gray-700">
+              <div className="mb-6 font-normal text-gray-700">
                 {expandedMap[event.id]
                   ? event.description
                   : event.description.length > 100
-                  ? event.description.substring(0, 100) + "..."
-                  : event.description}
+                    ? event.description.substring(0, 100) + "..."
+                    : event.description}
 
                 <div className="flex flex-wrap justify-between items-center">
                   <span className="text-gray-800 font-bold">
@@ -55,7 +54,7 @@ const Event = ({ props }) => {
                     End Date: {event.timeline.end}
                   </span>
                 </div>
-              </p>
+              </div>
             </div>
           </Link>
           <div className="absolute bottom-1">

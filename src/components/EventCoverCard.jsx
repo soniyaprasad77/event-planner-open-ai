@@ -8,9 +8,8 @@ const EventCoverCard = ({ events, eventId }) => {
         <div
           className="w-full absolute inset-0 bg-cover bg-repeat filter blur-sm"
           style={{
-            backgroundImage: `url(${require(`../data${
-              events[eventId - 1].image
-            }`)})`,
+            backgroundImage: `url(${`${events[eventId - 1].image
+              }`})`,
           }}
         ></div>
         <div className="flex justify-center relative z-10 bg-white sm:mx-16 sm:mt-3 sm:mb-6 rounded-xl">
@@ -64,7 +63,7 @@ const EventCoverCard = ({ events, eventId }) => {
           </div>
           <div className="w-full ml-[-2.5rem] md:ml-0 md:w-1/2 sm:h-16 md:h-64 flex justify-center relative sm:m-1">
             <img
-              src={require(`../data${events[eventId - 1].image}`)}
+              src={`${events[eventId - 1].image}`}
               alt="Event Image"
               className="object-cover max-w-full max-h-full rounded-lg mr-[-2rem]"
             />
