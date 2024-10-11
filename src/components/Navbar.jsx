@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { BsCart2 } from "react-icons/bs";
 import { HiOutlineBars3 } from "react-icons/hi2";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
@@ -13,10 +12,8 @@ import HomeIcon from "@mui/icons-material/Home";
 import InfoIcon from "@mui/icons-material/Info";
 import CommentRoundedIcon from "@mui/icons-material/CommentRounded";
 import PhoneRoundedIcon from "@mui/icons-material/PhoneRounded";
-import ShoppingCartRoundedIcon from "@mui/icons-material/ShoppingCartRounded";
-import LuggageIcon from "@mui/icons-material/Luggage";
 import { Link } from "react-router-dom";
-import logo from "../assets/tryvalleylogo.png";
+import logo from "/assets/tryvalleylogo.png";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);

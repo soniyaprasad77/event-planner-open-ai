@@ -1,8 +1,8 @@
 import React from "react";
 import TeamMember from "./TeamMember";
-import deepesh from "../assets/TeamMemberPhotos/deepesh.jpg";
-import priyansu from "../assets/TeamMemberPhotos/priyansu.jpg";
-import soniya from "../assets/TeamMemberPhotos/Soniya.png";
+import deepesh from "/teamImages/deepesh.jpg";
+import priyansu from "/teamImages/priyansu.jpg";
+import soniya from "/teamImages/Soniya.png";
 
 const OurTeam = () => {
   return (

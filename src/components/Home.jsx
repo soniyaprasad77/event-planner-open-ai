@@ -12,13 +12,11 @@ const slides = [
   <img key="gif1" className="h-screen w-screen" src={gif1} alt="Slide 1" />,
   <img key="img2" className="h-screen w-screen" src={img2} alt="Slide 4" />,
 ];
-import backgroundImg from "../assets/backgroundImage.webp";
 
 const Home = () => {
   return (
     <>
       <div
-        style={{ backgroundImage: `url(${backgroundImg})` }}
         className=" home-container "
       >
         <div className="flex absolute h-screen  bg-black">
