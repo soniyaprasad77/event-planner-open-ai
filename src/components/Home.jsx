@@ -1,14 +1,10 @@
 import React from "react";
-import { FiArrowRight } from "react-icons/fi";
 import About from "./About.jsx";
-import Contact from "./Contact.jsx";
-import { Link } from "react-router-dom";
 import Carousel from "./Corousel.jsx"; // Ensure this path is correct
-import img1 from "../assets/SliderImages/img1.jpg";
-import img2 from "../assets/SliderImages/img2.png";
-import gif1 from "../assets/SliderImages/gif1.gif";
-import gif2 from "../assets/SliderImages/gif2.gif";
-import vid from "../assets/smiling.mp4";
+import img1 from "/sliderImages/img1.jpg";
+import img2 from "/sliderImages/img2.png";
+import gif1 from "/sliderImages/gif1.gif";
+import gif2 from "/sliderImages/gif2.gif";
 import OurTeam from "./OurTeam.jsx";
 const slides = [
   <img key="gif2" className="h-screen w-screen" src={gif2} alt="Slide 2" />,
