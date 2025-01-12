@@ -1,7 +1,10 @@
-
 # EventEZ
 
 EventEZ is a comprehensive travel planning application designed to enhance the Tri-Valley’s tourism by integrating cutting-edge technologies like AI, Large Language Models (LLMs), and Google Maps API. The app provides users with personalized event recommendations, geolocation services, and exclusive deals, making trip planning efficient and engaging.
+
+See in the video: 
+
+[Watch Event EZ on Youtube](https://youtu.be/RH7yk7rE8vk?si=h-nfkzx7YUIOjc99)
 
 ## Table of Contents
 
